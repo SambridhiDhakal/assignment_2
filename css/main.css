@@ -1,0 +1,249 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(249, 247, 247);
+}
+
+
+header, footer p{
+    text-align: center;
+    border: 2px solid black;
+    padding: 1rem; 
+    background:linear-gradient(#3D52A0,#EDE8F5,#3D52A0);
+}
+
+nav {
+    background-color: #7091E6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: darkblue;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    padding: 0.5rem;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #EDE8F5;
+    min-width: 150px;
+}
+
+nav ul li a{
+    font-size: 16px;
+}
+nav ul li:hover > ul {
+    display: block;
+    z-index: 1;
+}
+
+nav ul li ul li a {
+    color: darkblue;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li ul li a:hover {
+    color: white;
+    background-color: #5A7AC4;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+}
+
+section{
+    flex-grow: 1;
+    margin: 0px 10px;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+table th, table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+table th {
+    background-color:#3D52A0;
+    color: white;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+q{
+    font-family: cursive;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.bio-section{
+    margin: 10px 0px;
+}
+
+.bio-section figure{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bio-section figure img{
+    width: 36vw;
+    padding: 20px;
+}
+
+.bio-section figure img:nth-child(2){
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.bio-section figure img:nth-child(1){
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
+aside {        
+    flex-basis: 300px;
+    padding: 1.3rem;  
+    background-image:url("../images/albert\ einstein.avif"); 
+    background-repeat: no-repeat;           
+    border-radius: 10px;
+    flex-grow: 0;
+}
+
+aside h2{
+    color: white;
+    font-variant: small-caps;
+}
+
+aside ul li{
+    list-style: none;
+    line-height: 3rem;
+}
+
+ aside ul > li > a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+aside a:hover{
+    color: rgb(5, 197, 255);
+}
+
+section .photos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+main section video{
+    width: 100%;
+}
+main figure img{
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 3%, 98% 99%, 3% 93%);
+}
+
+
+@media (min-width: 601px) and (max-width: 991px) {
+    main {
+        flex-wrap: wrap;
+
+    }
+    section, aside {
+        flex-basis: 100%;
+        margin: auto;
+    }
+    aside {
+        margin-top: 20px;
+        background-image:url("../images/einstein7.webp"); 
+        background-repeat:repeat;           
+        border-radius: 10px;
+    }
+
+    aside h2{
+        color: rgb(212, 255, 0);
+        font-weight: bolder;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .bio-section figure{
+        flex-direction: column;
+    }
+
+    .bio-section figure img{
+        width: 100%;
+    }
+    
+}
+@media (max-width: 600px) {
+    nav a{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bolder;
+    }
+    main{
+        flex-wrap: wrap;
+    }
+    section, aside{
+        flex-basis: 100%;
+        margin: auto;
+    }
+    aside {
+        margin-top: 20px;
+        background-image:url("../images/einstein8.webp"); 
+        background-repeat:repeat;           
+        border-radius: 10px;
+    }
+    .bio-section figure{
+        flex-direction: column;
+    }
+
+    .bio-section figure img{
+        width: 100%;
+    }      
+}
+
+
+footer p{
+    font-weight: bold;
+}
