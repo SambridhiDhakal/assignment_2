@@ -154,7 +154,7 @@ aside {
 aside h2{
     color: white;
     font-variant: small-caps;
-    background-color: rgb(45, 59, 115);
+    background-color: #5A7AC4;
     padding: 10px;
     border-radius: 5px;
 }
@@ -165,7 +165,7 @@ aside ul li{
 }
 
  aside ul > li > a{
-    background-color: rgb(45, 59, 115);
+    background-color: #5A7AC4;
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
